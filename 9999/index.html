@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Senior dasturchi portfolio — arxitektura, tezlik va ishonchli yetkazib berish."
+    />
+    <title>Baratov-dev | Senior dasturchi</title>
+    <script>
+      try {
+        var __t = localStorage.getItem("portfolio-theme");
+        if (!__t) __t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", __t);
+      } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <div class="ambient__orb ambient__orb--a"></div>
+      <div class="ambient__orb ambient__orb--b"></div>
+      <div class="ambient__orb ambient__orb--c"></div>
+      <div class="ambient__grid"></div>
+    </div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <div class="reading-progress" data-scroll-progress role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+    <a class="skip-link" href="#main">Asosiy tarkibga o‘tish</a>
+
+    <header class="site-header glass" data-header>
+      <div class="container header__inner">
+        <a class="logo" href="./css/foto/image.png" aria-label="Bosh sahifa">
+          <span class="logo__orbit" aria-hidden="true"></span>
+          <span class="logo__text">&lt;/&gt; Baratov-dev.uz</span>
+        </a>
+
+        <nav class="nav" aria-label="Asosiy menyu">
+          <button
+            type="button"
+            class="nav__toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            data-nav-toggle
+          >
+            <span class="nav__toggle-bar" aria-hidden="true"></span>
+            <span class="nav__toggle-bar" aria-hidden="true"></span>
+            <span class="nav__toggle-label">Menyu</span>
+          </button>
+          <ul id="nav-menu" class="nav__list" data-nav-menu>
+            <li><a href="#work" data-nav-link>Loyihalar</a></li>
+            <li><a href="#stack" data-nav-link>Stack</a></li>
+            <li><a href="#experience" data-nav-link>Tajriba</a></li>
+            <li><a href="#contact" data-nav-link>Aloqa</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button type="button" class="btn-cmd" data-cmd-open title="Tez navigatsiya (Ctrl+K)">
+            <span class="btn-cmd__icon" aria-hidden="true">⌘</span>
+            <span class="btn-cmd__kbd">K</span>
+          </button>
+          <button type="button" class="btn-icon" data-theme-toggle aria-label="Mavzuni almashtirish">
+            <span class="theme-icon" aria-hidden="true"></span>
+          </button>
+          <a class="btn btn--sm btn--ghost hide-mobile" href="#contact">Bog'lanish</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero">
+        <div class="container hero__layout">
+          <div class="hero__badge" data-reveal>
+            <span class="pulse" aria-hidden="true"></span>
+            <span>Hozir loyiha qabul qilinmoqda</span>
+          </div>
+
+          <div class="hero__content">
+            <p class="eyebrow" data-reveal>Senior dasturchi · Full-stack</p>
+            <h1 class="hero__title" data-reveal>
+            <span class="text-gradient">Baratov Quvonchbek</span></h1>
+            <p class="hero__lead" data-reveal>
+              Arxitektura, ishlash tezligi va jamoani yetkazib berish tartibi — men uchun “chiroyli kod”dan muhimroq
+              narsa: <strong>o‘lchanadigan natija</strong> va uzoq muddatli qo‘llab-quvvatlanadigan kod bazasi.
+            </p>
+            <p class="hero__typing" data-reveal>
+              <span class="hero__typing-label">Asosiy yo‘nalish:</span>
+              <span class="hero__typing-text" data-typing aria-live="polite"></span>
+              <span class="hero__typing-caret" aria-hidden="true"></span>
+            </p>
+            <div class="hero__cta" data-reveal>
+              <a class="btn btn--primary btn--shine" href="#work">Tanlangan ishlar</a>
+              <a class="btn btn--outline" href="https://github.com/quvonch05" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <button type="button" class="btn btn--ghost" data-copy-email data-email="baratovquvonchbek569@gmail.com">
+                Email nusxalash
+              </button>
+            </div>
+            <dl class="hero__stats" data-reveal data-count-root>
+              <div class="stat-card spotlight" data-spotlight>
+                <dt>Produksiya tajribasi</dt>
+                <dd><span data-count="10" data-suffix="+">0</span></dd>
+              </div>
+              <div class="stat-card spotlight" data-spotlight>
+                <dt>Yetaklagan / mentorga olgan jamoalar</dt>
+                <dd><span data-count="15" data-suffix="+">0</span></dd>
+              </div>
+              <div class="stat-card spotlight" data-spotlight>
+                <dt>Vaqt zonasi</dt>
+                <dd class="stat-card__accent">UTC+5</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero__panel" data-reveal>
+            <div class="code-window spotlight tilt" data-tilt data-spotlight>
+              <div class="code-window__chrome">
+                <span></span><span></span><span></span>
+                <span class="code-window__title">ship.ts</span>
+              </div>
+              <pre class="code-window__body"><code><span class="kw">async function</span> <span class="fn">yetkazish</span>(doira: <span class="ty">Doira</span>) {
+  <span class="kw">const</span> reja = <span class="kw">await</span> <span class="fn">dizayn</span>(doira);
+  <span class="kw">return</span> <span class="fn">chiqarish</span>(reja, {
+    sifat: <span class="str">'yuqori'</span>,
+    kuzatuv: <span class="str">'ochiq'</span>,
+  });
+}</code></pre>
+            </div>
+            <ul class="hero__chips" aria-label="Texnologiyalar">
+              <li>TypeScript</li>
+              <li>PostgreSQL</li>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee-section" aria-hidden="true">
+        <div class="marquee" data-marquee>
+          <div class="marquee__track">
+            <span>Arxitektura</span><span>·</span><span>Observability</span><span>·</span><span>Performance</span
+            ><span>·</span><span>DX</span><span>·</span><span>Security</span><span>·</span><span>CI/CD</span
+            ><span>·</span><span>Arxitektura</span><span>·</span><span>Observability</span><span>·</span
+            ><span>Performance</span><span>·</span><span>DX</span><span>·</span><span>Security</span
+            ><span>·</span><span>CI/CD</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section section--tight">
+        <div class="container">
+          <header class="section__head section__head--row" data-reveal>
+            <div>
+              <h2>Tanlangan ishlar</h2>
+              <p>
+                Har bir loyiha cheklovlar, kompromisslar va natija — faqat “stack ro‘yxati” emas.
+              </p>
+            </div>
+            <div class="filter" role="group" aria-label="Loyiha filtri" data-project-filter>
+              <button type="button" class="filter__btn is-active" data-filter="all">Hammasi</button>
+              <button type="button" class="filter__btn" data-filter="platform">Platforma</button>
+              <button type="button" class="filter__btn" data-filter="saas">SaaS</button>
+              <button type="button" class="filter__btn" data-filter="dx">DX</button>
+            </div>
+          </header>
+
+          <div class="bento" data-bento>
+            <article class="bento__item bento__item--wide project-tile spotlight tilt" data-tilt data-spotlight data-category="platform" data-reveal>
+              <div class="project-tile__glow"></div>
+              <div class="project-tile__top">
+                <span class="pill pill--accent">Platforma</span>
+                <time datetime="2024">2024</time>
+              </div>
+              <h3>Real vaqt analitika zanjiri</h3>
+              <p>
+                Soniyasiga 50k+ hodisa, aniq semantika, ustunli saqlash va daromad jamoalari uchun
+                subsoniya dashboardlar.
+              </p>
+              <ul class="tag-list">
+                <li>TypeScript</li>
+                <li>Kafka</li>
+                <li>ClickHouse</li>
+                <li>Kubernetes</li>
+              </ul>
+              <a class="project-tile__link" href="#">Case study →</a>
+            </article>
+
+            <article class="bento__item project-tile spotlight tilt" data-tilt data-spotlight data-category="saas" data-reveal>
+              <div class="project-tile__top">
+                <span class="pill">B2B SaaS</span>
+                <time datetime="2023">2023</time>
+              </div>
+              <h3>Ko‘p ijarachi auth &amp; billing</h3>
+              <p>SSO, SCIM va Stripe asosida — support yukini 40% ga tushirdi.</p>
+              <ul class="tag-list">
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+                <li>Stripe</li>
+              </ul>
+              <a class="project-tile__link" href="#">Batafsil →</a>
+            </article>
+
+            <article class="bento__item project-tile spotlight tilt" data-tilt data-spotlight data-category="dx" data-reveal>
+              <div class="project-tile__top">
+                <span class="pill">DX</span>
+                <time datetime="2022">2022</time>
+              </div>
+              <h3>Katta dizayn tizimi</h3>
+              <p>Tokenlar, WCAG, 12 ta jamoada qabul qilinish.</p>
+              <ul class="tag-list">
+                <li>React</li>
+                <li>Storybook</li>
+                <li>Vite</li>
+              </ul>
+              <a class="project-tile__link" href="#">Batafsil →</a>
+            </article>
+
+            <article class="bento__item bento__item--mid project-tile spotlight tilt" data-tilt data-spotlight data-category="platform" data-reveal>
+              <div class="project-tile__top">
+                <span class="pill">Infra</span>
+                <time datetime="2024">2024</time>
+              </div>
+              <h3>Multi-region failover</h3>
+              <p>RPO/RTO bo‘yicha aniq SLO, avtomatik tiklanish ssenariylari.</p>
+              <ul class="tag-list">
+                <li>Terraform</li>
+                <li>K8s</li>
+                <li>OTel</li>
+              </ul>
+              <a class="project-tile__link" href="#">Batafsil →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="section section--muted">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <h2>Texnik chuqurlik</h2>
+            <p>
+              Men “katta qayta yozish” o‘rniga chegaralar, kuzatuv va bosqichma-bosqich migratsiyalarni
+              afzal ko‘raman.
+            </p>
+          </header>
+          <div class="stack-bento" data-reveal>
+            <div class="stack-card spotlight" data-spotlight>
+              <div class="stack-card__icon" aria-hidden="true">01</div>
+              <h3>Backend &amp; ma’lumot</h3>
+              <p>API, kesh, navbatlar, migratsiya va so‘rov optimallashtirish.</p>
+              <ul>
+                <li>PostgreSQL · Redis</li>
+                <li>Node / Go</li>
+                <li>gRPC · REST</li>
+              </ul>
+            </div>
+            <div class="stack-card spotlight stack-card--accent" data-spotlight>
+              <div class="stack-card__icon" aria-hidden="true">02</div>
+              <h3>Frontend &amp; mahsulot</h3>
+              <p>Accessibility, murakkab SPA holati, performance byudjetlari.</p>
+              <ul>
+                <li>TypeScript · React</li>
+                <li>CSS arxitekturasi</li>
+                <li>Test piramidasi</li>
+              </ul>
+            </div>
+            <div class="stack-card spotlight" data-spotlight>
+              <div class="stack-card__icon" aria-hidden="true">03</div>
+              <h3>Platforma &amp; ishonchlilik</h3>
+              <p>CI/CD, IaC, incidentlar, bulut xarajatini nazorat.</p>
+              <ul>
+                <li>Docker · K8s</li>
+                <li>Terraform</li>
+                <li>Prometheus</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <h2>Tajriba</h2>
+            <p>
+              Yetakchilik — hammaga tushunarli hujjat va keraksiz kodni xavfsiz o‘chirishdir.
+            </p>
+          </header>
+          <ol class="timeline" data-reveal>
+            <li class="timeline__item timeline__item--glass">
+              <div class="timeline__range">2025 — hozirgacha</div>
+              <div class="timeline__body">
+                <h3>Principal Engineer — Northwind Labs</h3>
+                <p>
+                  Asosiy servislar yo‘l xaritasi, staff dasturchilarni mentorlik, PM bilan texnik
+                  kashfiyot va risklarni kamaytirish.
+                </p>
+              </div>
+            </li>
+            <li class="timeline__item timeline__item--glass">
+              <div class="timeline__range">2022 — 2024</div>
+              <div class="timeline__body">
+                <h3>Senior Engineer — Acme Commerce</h3>
+                <p>
+                  Checkout ishonchliligi, feature flaglar, progressiv chiqarish; P1 hodisalarini
+                  yillik 60% ga tushirish.
+                </p>
+              </div>
+            </li>
+            <li class="timeline__item timeline__item--glass">
+              <div class="timeline__range">2024</div>
+              <div class="timeline__body">
+                <h3>Full-stack Engineer — Studio Meridian</h3>
+                <p>
+                  Mijoz portallari, CMS integratsiyalari, code review madaniyati va test strategiyasi.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--contact">
+        <div class="container contact">
+          <div class="contact__intro spotlight" data-spotlight data-reveal>
+            <h2>Kuchli va barqaror narsa qilaylik</h2>
+            <p>
+              Qisqa brifing yuboring. Agar mos kelsak, odatda 30 daqiqalik suhbat bilan boshlaymiz —
+              doira va cheklovlarni aniqlash uchun.
+            </p>
+            <ul class="contact__bullets">
+              <li>Jamoa kuchaytirish va fractional liderlik</li>
+              <li>Arxitektura ko‘rib chiqish va “qutqaruv” missiyalari</li>
+              <li>Speakerlik va workshoplar</li>
+            </ul>
+          </div>
+          <form class="contact-form glass spotlight" data-spotlight data-contact-form data-reveal novalidate>
+            <div class="form-row">
+              <label for="name">Ism</label>
+              <input id="name" name="name" type="text" autocomplete="name" required maxlength="120" />
+              <span class="field-error" data-error-for="name"></span>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required maxlength="200" />
+              <span class="field-error" data-error-for="email"></span>
+            </div>
+            <div class="form-row">
+              <label for="subject">Mavzu <span class="optional">(ixtiyoriy)</span></label>
+              <input id="subject" name="subject" type="text" maxlength="200" />
+            </div>
+            <div class="form-row">
+              <label for="message">Xabar</label>
+              <textarea id="message" name="message" rows="5" required maxlength="4000"></textarea>
+              <span class="field-error" data-error-for="message"></span>
+            </div>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn--primary btn--block btn--shine" data-submit>Xabar yuborish</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer glass-footer">
+      <div class="container footer__inner">
+        <p>© <span data-year></span> Baratov-dev</p>
+        <a href="#top" class="footer__top">Yuqoriga ↑</a>
+      </div>
+    </footer>
+
+    <dialog class="cmd" data-cmd-dialog aria-labelledby="cmd-title">
+      <div class="cmd__panel glass">
+        <div class="cmd__head">
+          <h2 id="cmd-title" class="cmd__title">Tez navigatsiya</h2>
+          <p class="cmd__hint">Bo‘shliq yoki <kbd>Esc</kbd> yopish · <kbd>Ctrl</kbd>+<kbd>K</kbd></p>
+        </div>
+        <input class="cmd__input" type="search" data-cmd-input placeholder="Bo‘lim qidirish..." autocomplete="off" />
+        <ul class="cmd__list" data-cmd-results></ul>
+      </div>
+    </dialog>
+
+    <div class="toast-host" data-toast-host aria-live="polite"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
